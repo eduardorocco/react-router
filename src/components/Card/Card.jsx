@@ -7,14 +7,24 @@ export default function Card({ title = '', content = '', tags = [], image = '', 
 
     const getTagClass = (tag) => {
         switch (tag.toLowerCase()) {
-            case 'html':
+            case 'dolci':
                 return style.orange
-            case 'css':
+            case 'torte':
                 return style.blue
-            case 'js':
+            case 'ricette vegetariane':
                 return style.yellow
-            case 'php':
+            case 'ricette al forno':
                 return style.green
+            case 'antipasti':
+                return style.orange
+            case 'primi piatti':
+                return style.blue
+            case 'dolci veloci':
+                return style.yellow
+            case 'ricette veloci':
+                return style.green
+            case 'dolci al cioccolato':
+                return style.blue
         }
     };
 
