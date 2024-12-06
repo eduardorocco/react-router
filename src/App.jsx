@@ -1,13 +1,19 @@
-import Header from './components/Header/Header.jsx'
-import Main from './components/Main/Main.jsx'
-import Footer from './components/Footer/Footer.jsx'
+import PostList from './pages/PostList'
+import HomePage from './pages/HomePage'
+import AboutUs from './pages/AboutUs'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
-  return(
-    <>
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
-    </>
+  return (
+
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='about-us' element={<AboutUs />} />
+        <Route path='our-recipes' element={<PostList />} />
+      </Routes>
+    </BrowserRouter>
   )
+
+
 }
 export default App
